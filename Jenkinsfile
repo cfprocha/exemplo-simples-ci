@@ -21,7 +21,7 @@ pipeline {
             steps{
                 sh 'npm test'
             }
-        }
+        } 
         stage('Iniciar a aplicação do Nodejs'){
             steps {
                 sh '''
