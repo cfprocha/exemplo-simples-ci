@@ -12,6 +12,11 @@ pipeline {
                 sh 'npm install'
             }
         }
+        stage('Resolve vulnerabilidades'){
+            steps {
+                sh 'npm audit fix --force'
+            }
+        }
         stage('Executar os testes'){
             steps{
                 sh 'npm test'
